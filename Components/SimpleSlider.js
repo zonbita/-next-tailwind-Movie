@@ -7,7 +7,7 @@ function SimpleSlider() {
   const [index, setIndex] = useState(0);
   const Images = [
     "/lostcity.jpg",
-    "/asd.webp",
+    "/lostcity.jpg",
     "/lostcity2.jpg",
   ]
 
