@@ -5,7 +5,7 @@ import { server } from "../config";
 import SimpleSlider from '../Components/SimpleSlider'
 export default function Home({ movies }) {
   return (
-    <div className="bg-gray-700">
+    <div className="bg-gray-700 overflow-y-auto overflow-x-hidden">
       <SimpleSlider/>
       <PopularMovie movies={movies.results} />
     </div>
