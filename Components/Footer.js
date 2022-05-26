@@ -7,8 +7,8 @@ const Footer = () => {
             <p className="text-xl text-white">&copy; Copyright 2022 <span className="font-bold">ZONBITA</span></p>
         </div>
         </footer>
-    );
-  };
+    )
+  }
   
 
 export default Footer

@@ -7,7 +7,6 @@ export default function Home({ movies }) {
   return (
     <div className="bg-gray-700">
       <SimpleSlider/>
-      {/* <Hero /> */}
       <PopularMovie movies={movies.results} />
     </div>
   )
