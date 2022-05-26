@@ -2,11 +2,11 @@ import axios from "axios";
 import Hero from "../Components/Hero";
 import PopularMovie from "../Components/PopularMovie";
 import { server } from "../config";
-import SimpleSlider from '../Components/SimpleSlider'
+import Slider from '../Components/Slider'
 export default function Home({ movies }) {
   return (
     <div className="bg-gray-700 overflow-y-auto overflow-x-hidden">
-      <SimpleSlider/>
+      <Slider/>
       <PopularMovie movies={movies.results} />
     </div>
   )
