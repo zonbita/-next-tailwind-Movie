@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 html,
 body {
   padding: 0;
@@ -13,4 +17,27 @@ a {
 
 * {
   box-sizing: border-box;
+}
+.background-color{
+  background-color: #032541;
+}
+
+.custom_bg {
+  background-image: linear-gradient(to right, rgba(10.5, 31.5, 31.5, 1) 150px, rgba(10.5, 31.5, 31.5, 0.84) 100%);
+}
+
+footer {
+  max-width: 100%;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 0;
+  background-image: radial-gradient(at 30% top, #031d33 0%, #032541 70%);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-between;
+  justify-content: center;
 }
