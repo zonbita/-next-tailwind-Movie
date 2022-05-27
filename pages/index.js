@@ -5,7 +5,7 @@ import { server } from "../config";
 import Slider from '../Components/Slider'
 export default function Home({ movies }) {
   return (
-    <div className="bg-gray-700 overflow-y-auto overflow-x-hidden">
+    <div className="bg-[#0f0f0f]">
       <Slider/>
       <PopularMovie movies={movies.results} />
     </div>

@@ -3,7 +3,7 @@ import { Carousel } from "react-responsive-carousel";
 
 function Slider() {
   return (
-    <section className="relative h-[10vh-200px] shadow-2xl w-full  border-b-8 border-b-[#007a70]">
+    <section className="shadow-2xl w-full mb-12">
       <div className="">
       <Carousel className="h-full"
         autoPlay

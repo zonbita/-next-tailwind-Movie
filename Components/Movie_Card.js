@@ -1,18 +1,27 @@
-import Image from "next/image";
-import Link from "next/link";
+import React from 'react';
+import Button from '../button/Button';
+import Link from 'next/link';
+import { category } from '../../api/tmdbApi';
+import apiConfig from '../../api/apiConfig';
 
-const Movie_Card = ({ movie }) => {
-  return (
-    <Link href={`/movie/${movie.id}`} passHref>
-      <div className="bg-white shadow-sm rounded-md cursor-pointer">
-        <Image src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} width={700} height={800} className="rounded-t-md" alt={movie.title} />
-        <div className="px-6 py-2">
-          <div className="font-bold text-xl mb-1">{movie.title}</div>
-          <p className="text-gray-700 text-base mb-1">{movie.release_date}</p>
-        </div>
-      </div>
-    </Link>
-  );
-};
+const MovieCard = props => {
 
-export default Movie_Card;
+    const item  = props.item;
+
+    const link = '/' + category[props.category] + '/' + item.id;
+
+    const bg = apiConfig.w500Image(item.poster_path || item.backdrop_path);
+
+    return (
+        <Link to={link}>
+            <div className="movie-card" style={{backgroundImage: `url(${bg})`}}>
+                <Button>
+                    <i className="bx bx-play"></i>
+                </Button>
+            </div>
+            <h3>{item.title || item.name}</h3>
+        </Link>
+    );
+}
+
+export default MovieCard;
